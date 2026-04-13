@@ -5,10 +5,11 @@ import Image from "next/image";
 import { FadeUp } from "./motion";
 import { motion } from "framer-motion";
 import { useState } from "react";
+import { Magnetic } from "./magnetic";
 
 const commands = [
-  "git clone https://github.com/Ekaksh1/Aegis-Ransomware-Defense.git",
-  "cd Aegis-Ransomware-Defense && pip install -r requirements.txt",
+  "git clone https://github.com/Ekaksh1/Aegis_ransomware_defense.git",
+  "cd Aegis_ransomware_defense && pip install -r requirements.txt",
   "python app.py",
 ];
 
@@ -47,6 +48,7 @@ export function CTA() {
                     duration: 4,
                     repeat: Infinity,
                     ease: "easeInOut",
+                    delay: 0.2,
                   }}
                 >
                   <Image
@@ -62,7 +64,7 @@ export function CTA() {
               <h2 className="text-balance text-3xl font-bold text-foreground md:text-4xl lg:text-5xl">
                 Ready to defend against
                 <br />
-                <span className="bg-gradient-to-r from-primary via-gold-light to-primary bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-primary via-cyan-light to-primary bg-clip-text text-transparent">
                   ransomware?
                 </span>
               </h2>
@@ -73,22 +75,26 @@ export function CTA() {
               </p>
 
               <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
-                <a
-                  href="https://github.com/Ekaksh1/Aegis-Ransomware-Defense"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="group flex items-center gap-2 rounded-xl bg-primary px-8 py-4 text-sm font-semibold text-primary-foreground shadow-lg shadow-primary/20 transition-all hover:shadow-xl hover:shadow-primary/30 hover:brightness-110"
-                >
-                  <Github className="h-4 w-4" />
-                  Clone Repository
-                  <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-                </a>
-                <a
-                  href="#features"
-                  className="rounded-xl border border-border px-8 py-4 text-sm font-semibold text-foreground transition-all hover:border-primary/30 hover:bg-primary/5"
-                >
-                  Learn More
-                </a>
+                <Magnetic strength={0.3}>
+                  <a
+                    href="https://github.com/Ekaksh1/Aegis_ransomware_defense"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group flex items-center gap-2 rounded-xl bg-primary px-8 py-4 text-sm font-semibold text-primary-foreground shadow-lg shadow-primary/20 transition-all hover:shadow-xl hover:shadow-primary/30 hover:brightness-110"
+                  >
+                    <Github className="h-4 w-4" />
+                    Clone Repository
+                    <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+                  </a>
+                </Magnetic>
+                <Magnetic strength={0.2}>
+                  <a
+                    href="#features"
+                    className="rounded-xl border border-border px-8 py-4 text-sm font-semibold text-foreground transition-all hover:border-primary/30 hover:bg-primary/5"
+                  >
+                    Learn More
+                  </a>
+                </Magnetic>
               </div>
 
               {/* Quick start terminal */}

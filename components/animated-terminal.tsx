@@ -21,7 +21,7 @@ const typeColors: Record<string, string> = {
   info: "text-muted-foreground",
   success: "text-primary",
   warning: "text-destructive",
-  action: "text-gold-light",
+  action: "text-cyan-light",
 };
 
 export function AnimatedTerminal() {

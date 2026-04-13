@@ -54,24 +54,7 @@ export function GridBackground() {
       const h = canvas.offsetHeight;
       ctx.clearRect(0, 0, w, h);
 
-      // Draw subtle grid with green tint
-      ctx.strokeStyle = "rgba(27, 67, 50, 0.25)";
-      ctx.lineWidth = 0.5;
-      const gridSize = 70;
-      for (let x = 0; x < w; x += gridSize) {
-        ctx.beginPath();
-        ctx.moveTo(x, 0);
-        ctx.lineTo(x, h);
-        ctx.stroke();
-      }
-      for (let y = 0; y < h; y += gridSize) {
-        ctx.beginPath();
-        ctx.moveTo(0, y);
-        ctx.lineTo(w, y);
-        ctx.stroke();
-      }
-
-      // Gold particles and connections
+      // Cyan particles and connections
       for (let i = particles.length - 1; i >= 0; i--) {
         const p = particles[i];
         p.x += p.vx;
@@ -86,13 +69,13 @@ export function GridBackground() {
               ? (1 - progress) / 0.3
               : 1;
 
-        // Gold particle dot
+        // Cyan particle dot
         ctx.beginPath();
         ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(212, 175, 55, ${alpha * 0.6})`;
+        ctx.fillStyle = `rgba(0, 210, 255, ${alpha * 0.7})`;
         ctx.fill();
 
-        // Connection lines in gold
+        // Connection lines in cyan
         for (let j = i - 1; j >= 0; j--) {
           const p2 = particles[j];
           const dx = p.x - p2.x;
@@ -103,7 +86,7 @@ export function GridBackground() {
             ctx.beginPath();
             ctx.moveTo(p.x, p.y);
             ctx.lineTo(p2.x, p2.y);
-            ctx.strokeStyle = `rgba(212, 175, 55, ${lineAlpha})`;
+            ctx.strokeStyle = `rgba(0, 210, 255, ${lineAlpha})`;
             ctx.lineWidth = 0.5;
             ctx.stroke();
           }
@@ -133,10 +116,42 @@ export function GridBackground() {
   }, []);
 
   return (
-    <canvas
-      ref={canvasRef}
-      className="pointer-events-none absolute inset-0 h-full w-full"
-      aria-hidden="true"
-    />
+    <div className="absolute inset-0 z-0">
+      {/* Subtle Mountains */}
+      <div className="absolute inset-x-0 bottom-0 h-[400px] opacity-20 transition-opacity duration-1000">
+        <svg
+          viewBox="0 0 1440 320"
+          className="h-full w-full fill-none"
+          preserveAspectRatio="none"
+        >
+          {/* Back range */}
+          <path
+            d="M0,320 L240,120 L480,240 L720,100 L960,280 L1200,160 L1440,320 Z"
+            fill="hsl(var(--primary) / 0.05)"
+            stroke="hsl(var(--primary) / 0.1)"
+            strokeWidth="1"
+          />
+          {/* Mid range */}
+          <path
+            d="M-200,320 L150,180 L400,280 L700,150 L1000,300 L1300,200 L1600,320 Z"
+            fill="hsl(var(--primary) / 0.08)"
+            stroke="hsl(var(--primary) / 0.2)"
+            strokeWidth="1"
+          />
+          {/* Front range (more subtle) */}
+          <path
+            d="M0,320 L300,220 L600,300 L900,200 L1200,320 Z"
+            fill="hsl(var(--primary) / 0.12)"
+            stroke="hsl(var(--primary) / 0.4)"
+            strokeWidth="1"
+          />
+        </svg>
+      </div>
+      <canvas
+        ref={canvasRef}
+        className="pointer-events-none absolute inset-0 h-full w-full"
+        aria-hidden="true"
+      />
+    </div>
   );
 }

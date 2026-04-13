@@ -19,10 +19,12 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#112B21",
+  themeColor: "#050B14",
   width: "device-width",
   initialScale: 1,
 };
+
+import { Spotlight } from "@/components/spotlight";
 
 export default function RootLayout({
   children,
@@ -30,10 +32,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="dark">
+    <html lang="en" className="scroll-smooth">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} font-sans`}
+        className={`${geistSans.variable} ${geistMono.variable} noise-overlay min-h-screen bg-background font-sans antialiased`}
       >
+        <Spotlight />
         {children}
       </body>
     </html>

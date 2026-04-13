@@ -39,7 +39,7 @@ const technologies = [
 export function TechStack() {
   return (
     <section className="relative overflow-hidden border-y border-border bg-card/30 px-6 py-24 md:py-32">
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top,hsl(46_65%_52%/0.03),transparent_60%)]" />
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top,hsl(var(--primary)/0.03),transparent_60%)]" />
 
       <div className="relative mx-auto max-w-7xl">
         <FadeUp>

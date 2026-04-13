@@ -30,7 +30,7 @@ function AnimatedRing({
             cy="50"
             r="44"
             fill="none"
-            stroke="hsl(152 25% 20%)"
+            stroke="hsl(var(--border))"
             strokeWidth="4"
           />
           <motion.circle
@@ -38,7 +38,7 @@ function AnimatedRing({
             cy="50"
             r="44"
             fill="none"
-            stroke="hsl(46 65% 52%)"
+            stroke="hsl(var(--primary))"
             strokeWidth="4"
             strokeLinecap="round"
             strokeDasharray={circumference}

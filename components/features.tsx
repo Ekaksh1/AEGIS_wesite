@@ -59,7 +59,7 @@ const features = [
 export function Features() {
   return (
     <section id="features" className="relative px-6 py-28 md:py-36">
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,hsl(46_65%_52%/0.02),transparent_70%)]" />
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,hsl(var(--primary)/0.03),transparent_70%)]" />
 
       <div className="relative mx-auto max-w-7xl">
         <FadeUp>

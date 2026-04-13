@@ -53,7 +53,7 @@ export function HowItWorks() {
       id="how-it-works"
       className="noise-overlay relative overflow-hidden border-y border-border bg-card/30 px-6 py-28 md:py-36"
     >
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_center,hsl(46_65%_52%/0.02),transparent_70%)]" />
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_center,hsl(var(--primary)/0.02),transparent_70%)]" />
 
       <div className="relative z-10 mx-auto max-w-7xl">
         <FadeUp>

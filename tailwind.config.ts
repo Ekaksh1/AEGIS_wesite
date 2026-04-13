@@ -37,9 +37,9 @@ const config: Config = {
           DEFAULT: "hsl(var(--destructive))",
           foreground: "hsl(var(--destructive-foreground))",
         },
-        gold: {
-          DEFAULT: "hsl(var(--gold))",
-          light: "hsl(var(--gold-light))",
+        cyan: {
+          DEFAULT: "hsl(var(--cyan))",
+          light: "hsl(var(--cyan-light))",
         },
       },
       fontFamily: {

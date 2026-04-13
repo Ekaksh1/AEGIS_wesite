@@ -38,7 +38,7 @@ export function GlowCard({
         <div
           className="pointer-events-none absolute -inset-px opacity-0 transition-opacity duration-300 group-hover:opacity-100"
           style={{
-            background: `radial-gradient(400px circle at ${mousePos.x}px ${mousePos.y}px, rgba(212, 175, 55, 0.07), transparent 60%)`,
+            background: `radial-gradient(400px circle at ${mousePos.x}px ${mousePos.y}px, hsla(199, 89%, 48%, 0.12), transparent 80%)`,
           }}
         />
       )}

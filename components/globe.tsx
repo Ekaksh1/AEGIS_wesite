@@ -184,9 +184,9 @@ export function Globe({ size = 300, className = "" }: GlobeProps) {
         cy,
         radius
       );
-      gradient.addColorStop(0, "hsla(152, 38%, 18%, 0.4)");
-      gradient.addColorStop(0.7, "hsla(152, 38%, 13%, 0.3)");
-      gradient.addColorStop(1, "hsla(152, 42%, 8%, 0.15)");
+      gradient.addColorStop(0, "hsla(222, 47%, 12%, 0.4)");
+      gradient.addColorStop(0.7, "hsla(222, 47%, 8%, 0.3)");
+      gradient.addColorStop(1, "hsla(222, 47%, 4%, 0.15)");
 
       ctx.beginPath();
       ctx.arc(cx, cy, radius, 0, Math.PI * 2);
@@ -196,7 +196,7 @@ export function Globe({ size = 300, className = "" }: GlobeProps) {
       // Subtle border
       ctx.beginPath();
       ctx.arc(cx, cy, radius, 0, Math.PI * 2);
-      ctx.strokeStyle = "hsla(152, 25%, 30%, 0.3)";
+      ctx.strokeStyle = "hsla(217, 32%, 30%, 0.3)";
       ctx.lineWidth = 0.5;
       ctx.stroke();
 
@@ -217,7 +217,7 @@ export function Globe({ size = 300, className = "" }: GlobeProps) {
             started = false;
           }
         }
-        ctx.strokeStyle = "hsla(152, 25%, 25%, 0.15)";
+        ctx.strokeStyle = "hsla(217, 32%, 25%, 0.15)";
         ctx.lineWidth = 0.5;
         ctx.stroke();
       }
@@ -239,7 +239,7 @@ export function Globe({ size = 300, className = "" }: GlobeProps) {
             started = false;
           }
         }
-        ctx.strokeStyle = "hsla(152, 25%, 25%, 0.15)";
+        ctx.strokeStyle = "hsla(217, 32%, 25%, 0.15)";
         ctx.lineWidth = 0.5;
         ctx.stroke();
       }
@@ -252,7 +252,7 @@ export function Globe({ size = 300, className = "" }: GlobeProps) {
           const alpha = 0.2 + z * 0.6;
           ctx.beginPath();
           ctx.arc(p.x, p.y, 1.2, 0, Math.PI * 2);
-          ctx.fillStyle = `hsla(46, 65%, 52%, ${alpha})`;
+          ctx.fillStyle = `hsla(199, 89%, 48%, ${alpha})`;
           ctx.fill();
         }
       }
@@ -266,12 +266,12 @@ export function Globe({ size = 300, className = "" }: GlobeProps) {
           // Glow
           ctx.beginPath();
           ctx.arc(p.x, p.y, 4 + pulse * 2, 0, Math.PI * 2);
-          ctx.fillStyle = `hsla(46, 65%, 52%, ${0.1 + pulse * 0.1})`;
+          ctx.fillStyle = `hsla(199, 89%, 48%, ${0.1 + pulse * 0.1})`;
           ctx.fill();
           // Core dot
           ctx.beginPath();
           ctx.arc(p.x, p.y, 2, 0, Math.PI * 2);
-          ctx.fillStyle = `hsla(46, 65%, 60%, ${0.7 + pulse * 0.3})`;
+          ctx.fillStyle = `hsla(199, 89%, 60%, ${0.7 + pulse * 0.3})`;
           ctx.fill();
         }
       }

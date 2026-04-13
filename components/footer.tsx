@@ -5,7 +5,7 @@ import { Globe } from "./globe";
 import Image from "next/image";
 
 const socialLinks = [
-  { label: "GITHUB", href: "https://github.com/Ekaksh1/Aegis-Ransomware-Defense" },
+  { label: "GITHUB", href: "https://github.com/Ekaksh1/Aegis_ransomware_defense" },
   { label: "LINKEDIN", href: "#" },
   { label: "X", href: "#" },
 ];

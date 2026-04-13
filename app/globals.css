@@ -4,27 +4,27 @@
 
 @layer base {
   :root {
-    --background: 152 42% 10%;
-    --foreground: 210 17% 98%;
-    --card: 152 38% 13%;
-    --card-foreground: 210 17% 98%;
-    --muted: 152 30% 17%;
-    --muted-foreground: 150 12% 58%;
-    --accent: 46 65% 52%;
-    --accent-foreground: 152 42% 10%;
-    --border: 152 25% 20%;
-    --ring: 46 65% 52%;
-    --primary: 46 65% 52%;
-    --primary-foreground: 152 42% 8%;
-    --secondary: 152 30% 17%;
-    --secondary-foreground: 210 17% 98%;
-    --destructive: 0 72% 51%;
-    --destructive-foreground: 210 17% 98%;
-    --radius: 0.625rem;
-    --gold: 46 65% 52%;
-    --gold-light: 46 65% 68%;
-    --green-deep: 152 42% 6%;
-    --green-mid: 152 38% 22%;
+    --background: 222 47% 4%;
+    --foreground: 210 40% 98%;
+    --card: 222 47% 6%;
+    --card-foreground: 210 40% 98%;
+    --muted: 222 30% 12%;
+    --muted-foreground: 215 20% 65%;
+    --accent: 199 89% 48%;
+    --accent-foreground: 222 47% 4%;
+    --border: 217 32% 17%;
+    --ring: 199 89% 48%;
+    --primary: 199 89% 48%;
+    --primary-foreground: 222 47% 4%;
+    --secondary: 222 30% 18%;
+    --secondary-foreground: 210 40% 98%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+    --radius: 0.75rem;
+    --cyan: 199 89% 48%;
+    --cyan-light: 180 100% 50%;
+    --blue-deep: 222 47% 2%;
+    --blue-mid: 217 32% 12%;
   }
 }
 
@@ -53,8 +53,8 @@ html {
 
 /* Selection color */
 ::selection {
-  background-color: hsl(46 65% 52% / 0.3);
-  color: hsl(210 17% 98%);
+  background-color: hsl(199 89% 48% / 0.3);
+  color: hsl(210 40% 98%);
 }
 
 /* Scrollbar styling */
@@ -62,23 +62,23 @@ html {
   width: 6px;
 }
 ::-webkit-scrollbar-track {
-  background: hsl(152 42% 6%);
+  background: hsl(222 47% 2%);
 }
 ::-webkit-scrollbar-thumb {
-  background: hsl(152 25% 20%);
+  background: hsl(217 32% 17%);
   border-radius: 3px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: hsl(152 25% 28%);
+  background: hsl(199 89% 48% / 0.5);
 }
 
 /* Glow pulse for icons */
 @keyframes glow-pulse {
   0%, 100% {
-    box-shadow: 0 0 8px 0 hsl(46 65% 52% / 0.15);
+    box-shadow: 0 0 8px 0 hsl(199 89% 48% / 0.15);
   }
   50% {
-    box-shadow: 0 0 24px 4px hsl(46 65% 52% / 0.25);
+    box-shadow: 0 0 24px 4px hsl(199 89% 48% / 0.25);
   }
 }
 

@@ -4,16 +4,17 @@ import { ChevronDown } from "lucide-react";
 import { motion } from "framer-motion";
 import { GridBackground } from "./grid-background";
 import { AnimatedCounter } from "./animated-counter";
+import { Magnetic } from "./magnetic";
 
 export function Hero() {
   return (
     <section className="noise-overlay relative flex min-h-screen items-center justify-center overflow-hidden px-6 pt-20">
       <GridBackground />
 
-      {/* Radial glow - gold-tinted */}
+      {/* Radial glow - blue-tinted */}
       <div className="pointer-events-none absolute inset-0">
-        <div className="absolute left-1/2 top-1/4 h-[600px] w-[900px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-primary/[0.05] blur-[140px]" />
-        <div className="absolute bottom-1/4 right-1/4 h-[300px] w-[400px] rounded-full bg-primary/[0.03] blur-[100px]" />
+        <div className="absolute left-1/2 top-1/4 h-[600px] w-[900px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-primary/[0.08] blur-[140px]" />
+        <div className="absolute bottom-1/4 right-1/4 h-[300px] w-[400px] rounded-full bg-primary/[0.05] blur-[100px]" />
         <div className="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-background to-transparent" />
       </div>
 
@@ -27,7 +28,7 @@ export function Hero() {
         >
           Detect. Simulate.
           <br />
-          <span className="bg-gradient-to-r from-primary via-gold-light to-primary bg-clip-text text-transparent">
+          <span className="bg-gradient-to-r from-primary via-cyan-light to-primary bg-clip-text text-transparent">
             Neutralize.
           </span>
         </motion.h1>
@@ -51,14 +52,15 @@ export function Hero() {
           transition={{ duration: 0.6, delay: 0.6 }}
           className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row"
         >
-
-          <a
-            href="#features"
-            className="group flex items-center gap-2 rounded-xl border border-border px-8 py-4 text-sm font-semibold text-foreground transition-all hover:border-primary/30 hover:bg-primary/5"
-          >
-            Explore Features
-            <ChevronDown className="h-4 w-4 transition-transform group-hover:translate-y-0.5" />
-          </a>
+          <Magnetic strength={0.2}>
+            <a
+              href="#features"
+              className="group flex items-center gap-2 rounded-xl border border-border px-8 py-4 text-sm font-semibold text-foreground transition-all hover:border-primary/30 hover:bg-primary/5"
+            >
+              Explore Features
+              <ChevronDown className="h-4 w-4 transition-transform group-hover:translate-y-0.5" />
+            </a>
+          </Magnetic>
         </motion.div>
 
         {/* Stats */}
